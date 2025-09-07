@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WAPP_G12
 {
-    public partial class login : System.Web.UI.Page
+    public partial class Profile : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
