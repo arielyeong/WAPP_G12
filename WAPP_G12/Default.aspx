@@ -3,39 +3,41 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+        <section class="row" aria-labelledby="sciverseTitle">
+            <h1 id="sciverseTitle">Welcome to SciVerse</h1>
+            <p class="lead">
+                SciVerse is your all-in-one platform for exploring science, learning with interactive materials, and testing your knowledge through engaging quizzes and simulations.
+            </p>
         </section>
 
         <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
+            <section class="col-md-4" aria-labelledby="materialsTitle">
+                <h2 id="materialsTitle">Learning Materials</h2>
                 <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                    Access a repository of science videos, documents, and interactive resources designed to enhance your learning.
                 </p>
                 <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
-                <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                    <a class="btn btn-default" href="~/Pages/Materials.aspx">Explore Materials &raquo;</a>
                 </p>
             </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
+
+            <section class="col-md-4" aria-labelledby="quizTitle">
+                <h2 id="quizTitle">Quizzes & Performance</h2>
                 <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                    Test yourself with quizzes of multiple types. Automatic grading and performance tracking help you learn from your mistakes.
                 </p>
                 <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                    <a class="btn btn-default" href="~/Pages/Quizzes.aspx">Start Quiz &raquo;</a>
+                </p>
+            </section>
+
+            <section class="col-md-4" aria-labelledby="accountTitle">
+                <h2 id="accountTitle">Account Management</h2>
+                <p>
+                    Register as a student, manage your profile, and enjoy role-based access control. Guests can browse but must sign up to access full features.
+                </p>
+                <p>
+                    <a class="btn btn-default" href="~/Account/Register.aspx">Register Now &raquo;</a>
                 </p>
             </section>
         </div>
