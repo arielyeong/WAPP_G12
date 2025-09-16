@@ -15,3 +15,138 @@ h1 {
     border: none;
     cursor: pointer;
 }
+
+/* home */
+
+#home h2 {
+    color: var(--white);
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+#home p {
+    width: 50%;
+    color: var(--white);
+    font-size: 0.9rem;
+    line-height: 25px;
+    text-align: center;
+}
+
+#home .button {
+    margin-top: 30px;
+}
+
+#home a {
+    text-decoration: none;
+    background-color: var(--white);
+    font-size: 0.9rem;
+    line-height: 25px;
+    padding: 13px 35px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+    #home a.blue {
+        color: var(--background);
+        background: var(--white);
+    }
+
+        #home a.blue:hover {
+            color: var(--white);
+            background: var(--background);
+        }
+
+/* features */
+
+#about-us {
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+}
+
+
+#features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+    #features .fea-base {
+        display: flex;
+        align-items: center;
+        gap: 50px; /* Add space between the fea-boxes */
+        flex-direction: column; /* Display children in a column layout */
+    }
+
+    #features .fea-box {
+        display: flex;
+        width: 70%;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+    }
+
+        #features .fea-box .box-image img {
+            margin-right: 1.5rem;
+            display: block;
+            width: 200px; /* Adjust image width as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px 0 0 8px; /* Rounded corners on the left side */
+        }
+
+        #features .fea-box .fea-content {
+            align-items: center;
+            padding: 20px;
+        }
+
+            #features .fea-box .fea-content h3 {
+                font-size: 26px;
+                text-transform: uppercase;
+                margin-top: 0; /* Remove default margin */
+            }
+
+            #features .fea-box .fea-content p {
+                font-size: 16px;
+                margin: 0.5rem 0;
+            }
+
+#fea-bullet {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5vw 8vw 0 8vw;
+}
+
+    #fea-bullet .bullet-points {
+        max-width: 900px; /* Adjust as needed */
+        margin: 0 auto;
+    }
+
+    #fea-bullet h3 {
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    #fea-bullet .bullet-points li {
+        list-style-type: disc; /* Set bullet point style */
+        font-size: 1.1rem;
+        margin-bottom: 10px; /* Add spacing between bullet points */
+    }
+
+/* course */
+
+#course {
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #5483b3 !important; /* dark blue */
+}
+
+.navbar-logo {
+    height: 60px; /* Adjust size */
+    width: auto; /* Keeps proportions */
+    max-height: 70px; /* Prevent it from being too tall */
+}

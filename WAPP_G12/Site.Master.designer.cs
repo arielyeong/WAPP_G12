@@ -15,13 +15,13 @@ namespace WAPP_G12
     {
 
         /// <summary>
-        /// HeadContent control.
+        /// LogoImg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.Image LogoImg;
 
         /// <summary>
         /// MainContent control.

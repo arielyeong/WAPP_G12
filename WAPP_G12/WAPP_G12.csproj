@@ -129,6 +129,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\Profile.aspx" />
     <Content Include="Account\Logout.aspx" />
+    <Content Include="Images\WebLogo.png" />
     <Content Include="Pages\Home.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
