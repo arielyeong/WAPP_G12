@@ -19,6 +19,8 @@ namespace WAPP_G12
             lblDTRegistered.Text = DateTime.Now.ToString();
             SqlDataSource1.Insert();
             lblMessage.Text = "Registration Successful!";
+            Response.Redirect("~/Account/Login.aspx");
+
         }
     }
 }

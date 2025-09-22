@@ -161,6 +161,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+    text-align: center;
 }
 
 abbr[title] {
@@ -8040,7 +8041,7 @@ textarea.form-control-lg {
   text-align: right !important;
 }
 
-.text-center {
+.text-center {    text-align: center;
 }
 
 .text-decoration-none {

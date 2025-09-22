@@ -11,7 +11,7 @@ namespace WAPP_G12
 {
 
 
-    public partial class Home
+    public partial class ForgotPassword
     {
     }
 }

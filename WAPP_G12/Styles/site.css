@@ -6,6 +6,7 @@
 
 h1 {
     color: #0066cc;
+    text-align: center;
 }
 
 .button {
@@ -14,6 +15,12 @@ h1 {
     padding: 10px;
     border: none;
     cursor: pointer;
+}
+
+/*Site Master*/
+
+.navbar-nav .nav-link {
+    font-family: "Poppins", sans-serif;
 }
 
 /* home */
@@ -150,3 +157,168 @@ h1 {
     width: auto; /* Keeps proportions */
     max-height: 70px; /* Prevent it from being too tall */
 }
+
+/* Popup Overlay (hidden by default) */
+.popup-overlay {
+    display: none; /* 🔹 Hidden until JavaScript makes it flex */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup Box */
+.popup-box {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+    .popup-box h2 {
+        margin: 0 0 10px;
+        font-weight: bold;
+    }
+
+    .popup-box button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+        .popup-box button:hover {
+            background: #0056b3;
+        }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* side bar*/
+
+#side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: var(--white);
+    border-right: var(--border);
+    left: -250px;
+    transition: all .5s ease;
+}
+
+
+#side-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    #side-bar ul li {
+        border-top: 1px solid var(--borderline);
+        border-bottom: 1px solid --borderline;
+    }
+
+    #side-bar ul a {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        text-align: left;
+    }
+
+#side-bar .course ul a {
+    display: flex;
+    height: 60px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+}
+
+#side-bar ul a i {
+    margin-right: 10px;
+}
+
+#side-bar ul li:hover a {
+    padding-left: 30px;
+}
+
+#side-bar .profile a {
+    text-decoration: none;
+    background-color: var(--white);
+    font-size: 0.9rem;
+    line-height: 25px;
+    padding: 13px 30px;
+    font-weight: 600;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--background);
+}
+
+    #side-bar .profile a.btn:hover {
+        color: var(--white);
+        background: var(--background);
+    }
+
+#side-bar .profile {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+    #side-bar .profile .image {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        object-fit: contain;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    #side-bar .profile .igcse-image {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        object-fit: contain;
+        margin-top: 50px;
+        margin-bottom: 5px;
+    }
+
+    #side-bar .profile .name {
+        font-size: 20px;
+        color: var(--black);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #side-bar .profile .role {
+        font-size: 16px;
+        color: var(--light-color);
+        margin-bottom: 16px;
+    }
+

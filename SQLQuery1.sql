@@ -18,3 +18,12 @@ insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age,
 insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Alissa Vinick', 'Vinick', 'avinickh', 'yI5<?pKy5am7lzE', 9, 'Female', 'Albania', 'https://robohash.org/temporaeoscumque.png?size=50x50&set=set1', '2025-07-23 04:43:30');
 insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Sheila-kathryn Pomphrey', 'Pomphrey', 'spomphreyi', 'hC2@K=w(#75', 15, 'Female', 'China', 'https://robohash.org/dolorevenietvoluptatem.png?size=50x50&set=set1', '2025-08-18 17:39:58');
 insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Anastasia Cowx', 'Cowx', 'acowxj', 'cH2(t`E>mzA', 15, 'Genderqueer', 'Philippines', 'https://robohash.org/repellatnullaprovident.png?size=50x50&set=set1', '2025-06-07 03:33:37');
+
+
+select * from tblRegisteredUsers
+
+DELETE FROM tblRegisteredUsers;
+DBCC CHECKIDENT ('tblRegisteredUsers', RESEED, 0);
+TRUNCATE TABLE tblRegisteredUsers;
+
+

@@ -13,5 +13,12 @@ namespace WAPP_G12
         {
 
         }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();   // Clear all session data
+            Session.Abandon(); // End session
+            Response.Redirect("~/Default.aspx"); // Go back to homepage
+        }
     }
 }
