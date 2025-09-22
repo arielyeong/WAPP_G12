@@ -13,5 +13,12 @@ namespace WAPP_G12
         {
 
         }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            lblDTRegistered.Text = DateTime.Now.ToString();
+            SqlDataSource1.Insert();
+            lblMessage.Text = "Registration Successful!";
+        }
     }
 }
