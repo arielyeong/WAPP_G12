@@ -332,7 +332,7 @@
                 <!-- Links -->
                 <div class="d-flex justify-content-center mt-3">
                     <span>Already have an account?  </span>
-                    <a href="~/Account/Login.aspx" class="text-decoration-underline" style="color:#003399;"> Login</a>
+                    <a href="~/Account/Login.aspx" runat="server" class="text-decoration-underline" style="color:#003399;">  Login</a>
                 </div>
             </div>
             </div>

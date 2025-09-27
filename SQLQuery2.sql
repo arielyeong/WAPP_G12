@@ -1,0 +1,35 @@
+﻿insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Kaja Rooney', 'Rooney', 'krooney0', 'iX4%ULx3', 15, 'Female', 'Colombia', 'https://robohash.org/suntquiet.png?size=50x50&set=set1', '2025-02-19 11:42:17');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Ettore MacAnulty', 'MacAnulty', 'emacanulty1', 'hY7&H36{XI!C', 8, 'Male', 'New Zealand', 'https://robohash.org/inventoreliberosit.png?size=50x50&set=set1', '2024-11-05 06:14:41');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Jorge Gerlts', 'Gerlts', 'jgerlts2', 'kT6%g0B9', 17, 'Male', 'Thailand', 'https://robohash.org/sapientenihilfugit.png?size=50x50&set=set1', '2025-06-12 07:32:32');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Nancee Pegler', 'Pegler', 'npegler3', 'cF4@)c}(&Hq1|Y((', 15, 'Female', 'Iceland', 'https://robohash.org/earumabvoluptatem.png?size=50x50&set=set1', '2025-09-15 07:16:42');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Aida Santarelli', 'Santarelli', 'asantarelli4', 'dM9{0_eL(_s3"', 16, 'Female', 'Indonesia', 'https://robohash.org/facerequivelit.png?size=50x50&set=set1', '2025-02-20 01:28:28');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Mirilla Tefft', 'Tefft', 'mtefft5', 'sA1/!P)0.!I6l', 8, 'Female', 'China', 'https://robohash.org/magnamquiaeaque.png?size=50x50&set=set1', '2025-01-12 23:54:23');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Catlee Cobbled', 'Cobbled', 'ccobbled6', 'fO3|hCl`@', 11, 'Female', 'Czech Republic', 'https://robohash.org/voluptatemexet.png?size=50x50&set=set1', '2025-02-04 23:05:16');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Brinna Cleaver', 'Cleaver', 'bcleaver7', 'xW3|=y?v16C{?', 8, 'Female', 'Canada', 'https://robohash.org/laborumquiain.png?size=50x50&set=set1', '2025-01-23 15:38:34');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Milzie Joseff', 'Joseff', 'mjoseff8', 'zW4@x{M.c~<!ET', 18, 'Female', 'China', 'https://robohash.org/aspernaturvelrepudiandae.png?size=50x50&set=set1', '2025-07-26 20:58:16');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Regen Wolfers', 'Wolfers', 'rwolfers9', 'jV8<b/=sFN', 18, 'Male', 'Indonesia', 'https://robohash.org/etperspiciatisblanditiis.png?size=50x50&set=set1', '2025-02-10 02:02:27');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Lynnet Bearn', 'Bearn', 'lbearna', 'xH4*}W2c4toOT@s', 10, 'Female', 'France', 'https://robohash.org/corruptivoluptatemest.png?size=50x50&set=set1', '2024-12-15 13:02:12');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Devon Nan Carrow', 'Nan Carrow', 'dnanb', 'cT9$Yf''Ic', 16, 'Female', 'Philippines', 'https://robohash.org/sapienteexerror.png?size=50x50&set=set1', '2025-05-13 14:00:29');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Murial Draysay', 'Draysay', 'mdraysayc', 'yH6?2mL6.<F.uU', 8, 'Female', 'Philippines', 'https://robohash.org/delenitiametet.png?size=50x50&set=set1', '2025-02-13 11:26:58');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Rena Klauber', 'Klauber', 'rklauberd', 'vK5{c}~J1,#', 15, 'Female', 'China', 'https://robohash.org/temporesitquidem.png?size=50x50&set=set1', '2025-05-15 19:14:18');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Sidnee Aizikovich', 'Aizikovich', 'saizikoviche', 'aM6>|QTMOBX/uMi', 14, 'Male', 'Estonia', 'https://robohash.org/nisiautnihil.png?size=50x50&set=set1', '2025-02-14 03:28:42');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Pansy Gilbert', 'Gilbert', 'pgilbertf', 'nV8%=R<8L', 14, 'Female', 'Brazil', 'https://robohash.org/nesciuntsitasperiores.png?size=50x50&set=set1', '2025-02-17 05:48:16');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Veda Handling', 'Handling', 'vhandlingg', 'kQ5@paG2}''nVQyX', 13, 'Female', 'Netherlands', 'https://robohash.org/autenimvoluptatibus.png?size=50x50&set=set1', '2025-01-04 15:36:08');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Alissa Vinick', 'Vinick', 'avinickh', 'yI5<?pKy5am7lzE', 9, 'Female', 'Albania', 'https://robohash.org/temporaeoscumque.png?size=50x50&set=set1', '2025-07-23 04:43:30');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Sheila-kathryn Pomphrey', 'Pomphrey', 'spomphreyi', 'hC2@K=w(#75', 15, 'Female', 'China', 'https://robohash.org/dolorevenietvoluptatem.png?size=50x50&set=set1', '2025-08-18 17:39:58');
+insert into tblRegisteredUsers (Fullname, EmailAddress, Username, Password, Age, Gender, Country, Picture, dateRegister) values ('Anastasia Cowx', 'Cowx', 'acowxj', '1234', 15, 'Genderqueer', 'Philippines', 'https://robohash.org/repellatnullaprovident.png?size=50x50&set=set1', '2025-06-07 03:33:37');
+
+update tblRegisteredUsers Set Password='wapp'
+
+select * from tblRegisteredUsers
+
+DELETE FROM tblRegisteredUsers;
+
+DBCC CHECKIDENT ('tblRegisteredUsers', RESEED, 0);
+TRUNCATE TABLE tblRegisteredUsers;
+
+DELETE FROM tblRegisteredUsers
+WHERE RID IN (13);
+
+
+
