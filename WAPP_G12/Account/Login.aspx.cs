@@ -16,41 +16,54 @@ namespace WAPP_G12
 
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            // Get the connection string from Web.config
             string connString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                string query = "SELECT Username FROM tblRegisteredUsers WHERE (Username = @username OR EmailAddress = @username) AND Password = @password";
+
+                // Select Username + Role
+                string query = @"SELECT Username, Role 
+                                 FROM tblRegisteredUsers 
+                                 WHERE (Username = @username OR EmailAddress = @username) 
+                                 AND Password = @password";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
 
-                object result = cmd.ExecuteScalar();
+                SqlDataReader reader = cmd.ExecuteReader();
 
-                if (result != null)
+                if (reader.Read())
                 {
-                    Session["Username"] = result.ToString();
-                    Response.Redirect("~/Default.aspx", false);
+                    string loggedInUser = reader["Username"].ToString();
+                    string role = reader["Role"].ToString();
+
+                    Session["Username"] = loggedInUser;
+                    Session["Role"] = role;
+
+                    // Redirect based on role
+                    if (role == "Admin")
+                    {
+                        Response.Redirect("~/Admin/ViewUserList.aspx", false); // 👈 create this page for admins
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Default.aspx", false); // 👈 normal user homepage
+                    }
+
                     Context.ApplicationInstance.CompleteRequest();
                 }
                 else
                 {
-                    lblMessage.Text = "Invalid username or password!";
+                    lblMessage.Text = "❌ Invalid username or password!";
                     lblMessage.ForeColor = System.Drawing.Color.Red;
                 }
-
             }
         }
     }

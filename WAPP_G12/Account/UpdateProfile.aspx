@@ -1,65 +1,53 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WAPP_G12.Register" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UpdateProfile.aspx.cs" Inherits="WAPP_G12.UpdateProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-        <div class="d-flex justify-content-center align-items-center" style="min-height:80vh;">
-        <div class="card p-4 shadow-lg" style="max-width:700px; width:100%; border-radius:10px;">
-            <h1 class="text-center mb-3">Sign Up</h1>
+         <div class="d-flex justify-content-center align-items-center" style="min-height:80vh;">
+        <div class="card p-4 shadow-lg" style="max-width:800px; width:100%; border-radius:10px;">
+            <h1 class="text-center mb-4">Update Profile</h1>
 
-            <div class="row">
-                    <!-- Left Column -->
-                    <div class="col-md-6">
-                        <!-- Full Name -->
-                        <div class="mb-3">
-                            <label for="txtFullname" class="form-label">Full Name</label>
-                            <asp:TextBox ID="txtFullname" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="mb-3">
-                            <label for="txtEmail" class="form-label">Email Address</label>
-                            <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" CssClass="form-control"></asp:TextBox>
-                        </div>
-
-                        <!-- Username -->
-                        <div class="mb-3">
-                            <label for="TextBox1" class="form-label">Username</label>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
-
-                        <!-- Age -->
-                        <div class="mb-3">
-                            <label for="txtAge" class="form-label">Age</label>
-                            <asp:TextBox ID="txtAge" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
-                        </div>
+            <div class="row g-3">
+                <!-- Left Column -->
+                <div class="col-md-6">
+                    <!-- Full Name -->
+                    <div class="mb-3 text-start">
+                        <label for="txtFullname" class="form-label">Full Name</label>
+                        <asp:TextBox ID="txtFullname" runat="server" CssClass="form-control text-start"></asp:TextBox>
                     </div>
 
-                    <!-- Right Column -->
-                    <div class="col-md-6">
-                        <!-- Password -->
-                        <div class="mb-3">
-                            <label for="txtPassword" class="form-label">Password</label>
-                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
-                        </div>
+                    <!-- Email -->
+                    <div class="mb-3 text-start">
+                        <label for="txtEmail" class="form-label">Email</label>
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control text-start"></asp:TextBox>
+                    </div>
 
-                        <!-- Confirm Password -->
-                        <div class="mb-3">
-                            <label for="txtConPass" class="form-label">Confirm Password</label>
-                            <asp:TextBox ID="txtConPass" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
-                        </div>
+                    <!-- Username -->
+                    <div class="mb-3 text-start">
+                        <label for="txtUsername" class="form-label">Username</label>
+                        <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control text-start" ReadOnly="true"></asp:TextBox>
+                    </div>
 
-                        <!-- Gender -->
-                        <div class="mb-3">
-                            <label class="form-label">Gender</label><br />
-                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" CssClass="form-check-inline">
-                                <asp:ListItem>Male</asp:ListItem>
-                                <asp:ListItem>Female</asp:ListItem>
-                            </asp:RadioButtonList>
-                        </div>
+                    <!-- Age -->
+                    <div class="mb-3 text-start">
+                        <label for="txtAge" class="form-label">Age</label>
+                        <asp:TextBox ID="txtAge" runat="server" CssClass="form-control text-start"></asp:TextBox>
+                    </div>
+                </div>
 
-                        <!-- Country -->
-                        <div class="mb-3">
-                            <label for="dlCountry" class="form-label">Country</label>
-                            <asp:DropDownList ID="dlCountry" runat="server" CssClass="form-control">
-                                <asp:ListItem Value="Afghanistan">Afghanistan</asp:ListItem>
+                <!-- Right Column -->
+                <div class="col-md-6">
+                    <!-- Gender -->
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Gender</label><br />
+                        <asp:RadioButtonList ID="rbGender" runat="server" RepeatDirection="Horizontal" CssClass="form-check-inline">
+                            <asp:ListItem>Male</asp:ListItem>
+                            <asp:ListItem>Female</asp:ListItem>
+                        </asp:RadioButtonList>
+                    </div>
+
+                    <!-- Country -->
+                    <div class="mb-3 text-start">
+                        <label for="dlCountry" class="form-label">Country</label>
+                        <asp:DropDownList ID="dlCountry" runat="server" CssClass="form-control text-start">
+                            <asp:ListItem Value="Afghanistan">Afghanistan</asp:ListItem>
                                 <asp:ListItem Value="Åland Islands">Åland Islands</asp:ListItem>
                                 <asp:ListItem Value="Albania">Albania</asp:ListItem>
                                 <asp:ListItem Value="Algeria">Algeria</asp:ListItem>
@@ -303,66 +291,51 @@
                                 <asp:ListItem Value="Yemen">Yemen</asp:ListItem>
                                 <asp:ListItem Value="Zambia">Zambia</asp:ListItem>
                                 <asp:ListItem Value="Zimbabwe">Zimbabwe</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
 
-                            </asp:DropDownList>
-                        </div>
-
-                        <!-- Picture -->
-                        <div class="mb-3">
-                            <label for="FileUploadPic" class="form-label">Profile Picture</label>
-                            <asp:FileUpload ID="FileUploadPic" runat="server" CssClass="form-control" />
-                        </div>
+                    <!-- Profile Picture -->
+                    <div class="mb-3 text-start">
+                        <label for="FileUploadPic" class="form-label">Profile Picture</label>
+                        <asp:FileUpload ID="FileUploadPic" runat="server" CssClass="form-control text-start" />
+                        <asp:Image ID="imgPreview" runat="server" Width="100px" Height="100px" CssClass="mt-2 d-block" />
                     </div>
                 </div>
-
-                <!-- Hidden Registration Date -->
-                <asp:Label ID="lblDTRegistered" runat="server" CssClass="d-none"></asp:Label>
-
-                <!-- Register Button -->
-                <div class="d-grid mb-3 justify-content-center">
-                    <asp:Button ID="btnRegister" runat="server" 
-                                Text="Register" 
-                                CssClass="btn btn-danger" 
-                                OnClick="btnRegister_Click" />
-                </div>
-
-                <!-- Message Label -->
-                <asp:Label ID="lblMessage" runat="server" CssClass="d-block text-center text-danger"></asp:Label>
-
-                <!-- Links -->
-                <div class="d-flex justify-content-center mt-3">
-                    <span>Already have an account?  </span>
-                    <a href="~/Account/Login.aspx" runat="server" class="text-decoration-underline" style="color:#003399;">  Login</a>
-                </div>
-            </div>
             </div>
 
+            <!-- Buttons -->
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary px-4" OnClick="btnUpdate_Click" />
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary px-4" OnClick="btnCancel_Click" CausesValidation="false" />
+            </div>
 
-    <p>
+            <!-- Message Label -->
+            <asp:Label ID="lblMessage" runat="server" CssClass="d-block text-center mt-3 fw-bold"></asp:Label>
+        </div>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-            DeleteCommand="DELETE FROM [tblRegisteredUsers] WHERE [RID] = @RID" 
-            InsertCommand="INSERT INTO [tblRegisteredUsers] ([Fullname], [EmailAddress], [Username], [Password], [Age], [Gender], [Country], [Picture], [dateRegister], [Role]) VALUES (@Fullname, @EmailAddress, @Username, @Password, @Age, @Gender, @Country, @Picture, @dateRegister, @Role)" 
-            SelectCommand="SELECT * FROM [tblRegisteredUsers]" 
-            UpdateCommand="UPDATE [tblRegisteredUsers] SET [Fullname] = @Fullname, [EmailAddress] = @EmailAddress, [Username] = @Username, [Password] = @Password, [Age] = @Age, [Gender] = @Gender, [Country] = @Country, [Picture] = @Picture, [dateRegister] = @dateRegister, [Role] = @Role WHERE [RID] = @RID">
+    </div>
 
+    <!-- SqlDataSource -->
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server"
+        ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+        SelectCommand="SELECT * FROM [tblRegisteredUsers] WHERE [Username] = @Username"
+        UpdateCommand="UPDATE [tblRegisteredUsers] 
+                       SET [Fullname] = @Fullname, [EmailAddress] = @EmailAddress, [Age] = @Age, 
+                           [Gender] = @Gender, [Country] = @Country, [Picture] = @Picture
+                       WHERE [Username] = @Username">
 
-            <InsertParameters>
-                <asp:ControlParameter Name="Fullname" ControlID="txtFullname" PropertyName="Text" />
-                <asp:ControlParameter Name="EmailAddress" ControlID="txtEmail" PropertyName="Text" />
-                <asp:ControlParameter Name="Username" ControlID="TextBox1" PropertyName="Text" />
-                <asp:ControlParameter Name="Password" ControlID="txtPassword" PropertyName="Text" />
-                <asp:ControlParameter Name="Age" ControlID="txtAge" PropertyName="Text" />
-                <asp:ControlParameter Name="Gender" ControlID="RadioButtonList1" PropertyName="SelectedValue" />
-                <asp:ControlParameter Name="Country" ControlID="dlCountry" PropertyName="SelectedValue" />
-                <asp:Parameter Name="Picture" Type="String" />
-                <asp:Parameter Name="dateRegister" Type="DateTime" />
-                <asp:Parameter Name="Role" DefaultValue="User" Type="String" />
-            </InsertParameters>
+        <SelectParameters>
+            <asp:SessionParameter Name="Username" SessionField="Username" Type="String" />
+        </SelectParameters>
 
-        </asp:SqlDataSource>
-
-
-    </p>
+        <UpdateParameters>
+            <asp:ControlParameter Name="Fullname" ControlID="txtFullname" PropertyName="Text" />
+            <asp:ControlParameter Name="EmailAddress" ControlID="txtEmail" PropertyName="Text" />
+            <asp:ControlParameter Name="Age" ControlID="txtAge" PropertyName="Text" />
+            <asp:ControlParameter Name="Gender" ControlID="RadioButtonList1" PropertyName="SelectedValue" />
+            <asp:ControlParameter Name="Country" ControlID="dlCountry" PropertyName="SelectedValue" />
+            <asp:Parameter Name="Picture" Type="String" />
+            <asp:ControlParameter Name="Username" ControlID="txtUsername" PropertyName="Text" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
 </asp:Content>

@@ -59,9 +59,9 @@ namespace WAPP_G12
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Account/UpdateProfile.aspx");
         }
     }
 }

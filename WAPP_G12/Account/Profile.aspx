@@ -68,11 +68,14 @@
             <span class="profile-label">Registered On:</span>
             <asp:Label ID="lblDate" runat="server" />
         </div>
+
+            <div class="d-grid mb-3 justify-content-center">
+                <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update" CssClass="btn btn-primary" />
+            </div>
+
     </div>
 
-    <div class="d-grid mb-3 justify-content-center">
-        <asp:Button ID="btnUpdate" runat="server" OnClick="Button1_Click" Text="Update" />
-    </div>
+
 
 
 </asp:Content>
