@@ -17,10 +17,38 @@ h1 {
     cursor: pointer;
 }
 
+#course-main .heading {
+    font-size: 35px;
+    color: var(--black);
+    border-bottom: var(--border);
+    padding-bottom: 16px;
+    margin-top: 100px;
+    text-align: center;
+} 
+
 /*Site Master*/
+
+/* Keep navbar/header fixed above panels or sidebars */
+.navbar,
+header,
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000; /* make sure it's above any panel */
+}
+
+.navbar .dropdown-menu {
+    margin-top: 10px; /* push it down */
+}
 
 .navbar-nav .nav-link {
     font-family: "Poppins", sans-serif;
+}
+
+.body-content {
+    margin-top: 90px; /* try matching your navbar height */
 }
 
 /* home */
@@ -74,29 +102,111 @@ h1 {
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
-    .form-container h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    .form-container .form-group {
-        margin-bottom: 15px;
-    }
+.form-container .form-group {
+    margin-bottom: 15px;
+}
 
-    .form-container label {
-        font-weight: bold;
-    }
+.form-container label {
+    font-weight: bold;
+}
 
-    .form-container .btn {
-        width: 100%;
-        margin-top: 10px;
-    }
+.form-container .btn {
+    width: 100%;
+    margin-top: 10px;
+}
 
 .message {
     text-align: center;
     margin-top: 15px;
     font-weight: bold;
 }
+
+/* Sidebar */
+.admin-sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    height: calc(100vh - 60px); /* subtract header height */
+    position: fixed;
+    top: 60px; /* match header height - keep as is */
+    left: -220px; /* hidden by default */
+    transition: left 0.3s ease;
+    z-index: 1000; /* lower than header */
+    padding-top: 20px;
+}
+
+    .admin-sidebar.active {
+        left: 0;
+    }
+
+.sidebar-header {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.sidebar-logo {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    padding: 10px;
+    background: #34495e;
+    border-bottom: 1px solid #3d566e;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+    .sidebar-nav a i {
+        margin-right: 10px;
+    }
+
+    .sidebar-nav a:hover {
+        background: #34495e;
+    }
+
+    .sidebar-nav a.active {
+        background: #1abc9c; /* Highlight active item */
+        color: white;
+    }
+
+/* Content */
+.admin-content {
+    padding: 20px;
+    margin-top: 70px; /* Reduced from 80px to 70px to align with header height + minimal padding */
+    transition: margin-left 0.3s ease;
+}
+
+    .admin-content.shifted {
+        margin-left: 220px;
+    }
+
+/* Toggle Button */
+.menu-toggle {
+    position: fixed;
+    top: 15px; /* INSIDE the header */
+    left: 15px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 2100; /* above everything */
+}
+
+
 
 /* features */
 
@@ -356,4 +466,134 @@ h1 {
         color: var(--light-color);
         margin-bottom: 16px;
     }
+
+
+/*******/
+/* Contact Us */
+/*******/
+
+#contact {
+    display: block;
+    padding: 20px 0;
+    min-height: calc(100vh - 150px);
+    position: relative;
+}
+
+    #contact .contact-form-container {
+        background-color: #ADD8E6;
+        padding: 25px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 0 auto 30px auto; /* Center the container */
+        position: relative;
+        text-align: center;
+    }
+
+    #contact .form-fields-wrapper {
+        width: 100%;
+    }
+
+    #contact label {
+        margin-bottom: 6px;
+        font-weight: bold;
+        width: 90%;
+        max-width: 600px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    /* Force TextBox and TextArea width */
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+        width: 90% !important; /* Fill most of the blue box */
+        max-width: 600px; /* Keep it readable */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin: 0 auto 15px auto; /* Center horizontally */
+        display: block;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    #contact textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    /* Submit button */
+    #contact input[type="submit"] {
+        background-color: #87CEEB;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 15px auto 0 auto;
+        display: block;
+        font-size: 1em;
+        transition: background 0.3s ease;
+    }
+
+        #contact input[type="submit"]:hover {
+            background-color: #00BFFF;
+        }
+
+    /* Validation error */
+    #contact .text-danger {
+        display: block;
+        margin: 5px auto 10px auto;
+        font-size: 0.9em;
+        color: #dc3545;
+        width: 90%;
+        max-width: 600px;
+        text-align: left;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #contact .contact-form-container {
+        width: 95%;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+        width: 95% !important;
+        max-width: none;
+    }
+}
+
+
+
+/******/
+/*Admin View Message*/
+/******/
+
+/* Message Card Styling */
+.message-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-content p {
+    margin: 5px 0;
+}
+
+.message-actions {
+    display: flex;
+    align-items: center;
+}
+
 

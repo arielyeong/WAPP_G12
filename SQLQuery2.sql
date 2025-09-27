@@ -24,3 +24,5 @@ WHERE RID IN (13);
 
 ALTER TABLE tblRegisteredUsers
 ADD Role NVARCHAR(20) NOT NULL DEFAULT 'User';
+
+SELECT * FROM [tblContactUs]

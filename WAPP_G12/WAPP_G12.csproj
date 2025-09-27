@@ -123,6 +123,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Admin\EditUserInfo.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Account\ForgotPassword.aspx" />
     <Content Include="Global.asax" />
@@ -190,6 +191,7 @@
     <Content Include="Site.Master" />
     <Content Include="Account\UpdateProfile.aspx" />
     <Content Include="User\UserHomePage.aspx" />
+    <Content Include="Admin\ViewMessage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Admin\ViewUserList.aspx" />
     <Content Include="Web.config" />
@@ -226,6 +228,13 @@
     </Compile>
     <Compile Include="Account\ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditUserInfo.aspx.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUserInfo.aspx.designer.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -286,6 +295,13 @@
     </Compile>
     <Compile Include="User\UserHomePage.aspx.designer.cs">
       <DependentUpon>UserHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewMessage.aspx.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewMessage.aspx.designer.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
