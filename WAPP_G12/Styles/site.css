@@ -196,14 +196,14 @@ header,
 /* Toggle Button */
 .menu-toggle {
     position: fixed;
-    top: 15px; /* INSIDE the header */
+    top: 90px !important; /* Increased to 80px to clear a potential 60px header + padding/content */
     left: 15px;
     background: #2c3e50;
     color: white;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
-    z-index: 2100; /* above everything */
+    z-index: 2100; /* above everything, including header */
 }
 
 

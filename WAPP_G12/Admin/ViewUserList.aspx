@@ -1,9 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewUserList.aspx.cs" Inherits="WAPP_G12.ViewUserList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <!-- Menu Toggle Button -->
-        <button class="menu-toggle" type="button" onclick="toggleSidebar()">☰ Menu</button>
-
         <!-- Sidebar -->
         <aside class="admin-sidebar" id="sidebar">
             <div class="sidebar-header">
@@ -20,7 +17,11 @@
 
     <!-- Main Content -->
     <div class="admin-content" id="contentArea">
-        <h1>View All Users</h1>
+        <!-- Header with Title and Toggle Button -->
+        <div class="content-header">
+            <button class="menu-toggle" type="button" onclick="toggleSidebar()">☰ Menu</button>
+            <h1>View User List</h1>
+        </div>
 
         <!-- Search Box -->
         <div class="mb-3">
@@ -66,6 +67,7 @@
             <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
             <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
         </asp:GridView>
+        <br />
     </div>
 
     <script>

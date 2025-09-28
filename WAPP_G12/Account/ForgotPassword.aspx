@@ -5,7 +5,7 @@
         <div class="card p-5 shadow-lg" style="width: 380px; border-radius: 12px;">
 
             <!-- Title -->
-            <h1 class="text-center mb-3">Forgot Password</h1>
+            <h1 class="text-center mb-3">Forgot Your Password?</h1>
             <p class="text-center mb-4"><strong>Enter your username and new password</strong></p>
 
             <!-- Username -->
