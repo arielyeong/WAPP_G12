@@ -26,10 +26,10 @@ namespace WAPP_G12
             SqlDataSource1.SelectCommand = @"
                 SELECT * 
                 FROM [tblRegisteredUsers] 
-                WHERE Username LIKE '%' + @Keyword + '%' 
-                   OR EmailAddress LIKE '%' + @Keyword + '%' 
-                   OR Fullname LIKE '%' + @Keyword + '%' 
-                   OR Country LIKE '%' + @Keyword + '%'";
+                WHERE username LIKE '%' + @Keyword + '%' 
+                   OR emailAddress LIKE '%' + @Keyword + '%' 
+                   OR fullName LIKE '%' + @Keyword + '%' 
+                   OR country LIKE '%' + @Keyword + '%'";
 
             SqlDataSource1.SelectParameters.Clear();
             SqlDataSource1.SelectParameters.Add("Keyword", keyword);
@@ -64,9 +64,9 @@ namespace WAPP_G12
             string cs = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(cs))
             {
-                string query = "DELETE FROM tblRegisteredUsers WHERE Username=@Username";
+                string query = "DELETE FROM tblRegisteredUsers WHERE username = @username";
                 SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@username", username);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

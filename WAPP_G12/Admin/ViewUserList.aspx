@@ -11,6 +11,7 @@
                 <a href="~/Admin/ViewUserList.aspx" runat="server" class="sidebar-item active"><i class="fa fa-users"></i> User List</a>
                 <a href="~/Account/QuizList.aspx" runat="server" class="sidebar-item"><i class="fa fa-question-circle"></i> Quiz List</a>
                 <a href="~/Account/LearningMaterial.aspx" runat="server" class="sidebar-item"><i class="fa fa-book"></i> Learning Material</a>
+                <a href="~/Account/LearningMaterial.aspx" runat="server" class="sidebar-item"><i class="fa fa-chart-bar"></i> User Performance</a>
                 <a href="~/Admin/ViewMessage.aspx" runat="server" class="sidebar-item"><i class="fa fa-envelope"></i> View Messages</a>
             </nav>
         </aside>
@@ -42,22 +43,22 @@
             <AlternatingRowStyle BackColor="#CCCCCC" />
             <Columns>
                 <asp:BoundField DataField="RID" HeaderText="RID" ReadOnly="True" />
-                <asp:BoundField DataField="Fullname" HeaderText="Full Name" />
-                <asp:BoundField DataField="EmailAddress" HeaderText="Email Address" />
-                <asp:BoundField DataField="Username" HeaderText="Username" />
-                <asp:BoundField DataField="Age" HeaderText="Age" />
-                <asp:BoundField DataField="Gender" HeaderText="Gender" />
-                <asp:BoundField DataField="Country" HeaderText="Country" />
-                <asp:BoundField DataField="Picture" HeaderText="Picture File Path" />
+                <asp:BoundField DataField="fullName" HeaderText="Full Name" />
+                <asp:BoundField DataField="emailAddress" HeaderText="Email Address" />
+                <asp:BoundField DataField="username" HeaderText="Username" />
+                <asp:BoundField DataField="age" HeaderText="Age" />
+                <asp:BoundField DataField="gender" HeaderText="Gender" />
+                <asp:BoundField DataField="country" HeaderText="Country" />
+                <asp:BoundField DataField="picture" HeaderText="Picture File Path" />
                 <asp:BoundField DataField="dateRegister" HeaderText="Date Register" />
-                <asp:ImageField DataImageUrlField="Picture" HeaderText="Picture"></asp:ImageField>
+                <asp:ImageField DataImageUrlField="picture" HeaderText="Picture"></asp:ImageField>
 
-               <asp:TemplateField HeaderText="Actions">
+                <asp:TemplateField HeaderText="Actions">
                     <ItemTemplate>
                         <asp:Button ID="btnEdit" runat="server" Text="Edit" CommandName="EditUser" 
-                            CommandArgument='<%# Eval("Username") %>' CssClass="btn btn-warning"/>
+                            CommandArgument='<%# Eval("username") %>' CssClass="btn btn-warning"/>
                         <asp:Button ID="btnDelete" runat="server" Text="Delete" CommandName="DeleteUser" 
-                            CommandArgument='<%# Eval("Username") %>' CssClass="btn btn-danger"
+                            CommandArgument='<%# Eval("username") %>' CssClass="btn btn-danger"
                             OnClientClick="return confirm('Are you sure you want to delete this user?');" />
                     </ItemTemplate>
                 </asp:TemplateField>

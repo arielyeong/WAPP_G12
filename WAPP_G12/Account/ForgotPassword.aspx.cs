@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System;
 using System.Data.SqlClient;
 using System.Configuration;
 
@@ -33,10 +32,10 @@ namespace WAPP_G12
 
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string query = "UPDATE tblRegisteredUsers SET Password=@Password WHERE Username=@Username";
+                string query = "UPDATE tblRegisteredUsers SET password = @password WHERE username = @username";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Password", newPassword);
-                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@password", newPassword);
+                cmd.Parameters.AddWithValue("@username", username);
 
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();

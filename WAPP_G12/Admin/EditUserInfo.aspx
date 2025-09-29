@@ -318,24 +318,25 @@
     <!-- SqlDataSource -->
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"
         ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
-        SelectCommand="SELECT * FROM [tblRegisteredUsers] WHERE [Username] = @Username"
+        SelectCommand="SELECT * FROM [tblRegisteredUsers] WHERE [username] = @username"
         UpdateCommand="UPDATE [tblRegisteredUsers] 
-                       SET [Fullname] = @Fullname, [EmailAddress] = @EmailAddress, [Age] = @Age, 
-                           [Gender] = @Gender, [Country] = @Country, [Picture] = @Picture
-                       WHERE [Username] = @Username">
+                       SET [fullName] = @fullName, [emailAddress] = @emailAddress, [age] = @age, 
+                           [gender] = @gender, [country] = @country, [picture] = @picture
+                       WHERE [username] = @username">
 
         <SelectParameters>
-            <asp:SessionParameter Name="Username" SessionField="Username" Type="String" />
+            <asp:SessionParameter Name="username" SessionField="Username" Type="String" />
         </SelectParameters>
 
         <UpdateParameters>
-            <asp:ControlParameter Name="Fullname" ControlID="txtFullname" PropertyName="Text" />
-            <asp:ControlParameter Name="EmailAddress" ControlID="txtEmail" PropertyName="Text" />
-            <asp:ControlParameter Name="Age" ControlID="txtAge" PropertyName="Text" />
-            <asp:ControlParameter Name="Gender" ControlID="RadioButtonList1" PropertyName="SelectedValue" />
-            <asp:ControlParameter Name="Country" ControlID="dlCountry" PropertyName="SelectedValue" />
-            <asp:Parameter Name="Picture" Type="String" />
-            <asp:ControlParameter Name="Username" ControlID="txtUsername" PropertyName="Text" />
+            <asp:ControlParameter Name="fullName" ControlID="txtFullname" PropertyName="Text" />
+            <asp:ControlParameter Name="emailAddress" ControlID="txtEmail" PropertyName="Text" />
+            <asp:ControlParameter Name="age" ControlID="txtAge" PropertyName="Text" />
+            <asp:ControlParameter Name="gender" ControlID="RadioButtonList1" PropertyName="SelectedValue" />
+            <asp:ControlParameter Name="country" ControlID="dlCountry" PropertyName="SelectedValue" />
+            <asp:Parameter Name="picture" Type="String" />
+            <asp:ControlParameter Name="username" ControlID="txtUsername" PropertyName="Text" />
         </UpdateParameters>
     </asp:SqlDataSource>
+
 </asp:Content>

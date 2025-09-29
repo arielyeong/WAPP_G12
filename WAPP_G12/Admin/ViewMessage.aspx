@@ -26,9 +26,9 @@
                 <ItemTemplate>
                     <div class="message-card">
                         <div class="message-content">
-                            <p><strong>Name:</strong> <%# Eval("ContactName") %></p>
-                            <p><strong>Email:</strong> <%# Eval("ContactEmail") %></p>
-                            <p><strong>Message:</strong> <%# Eval("ContactMessage") %></p>
+                            <p><strong>Name:</strong> <%# Eval("contactName") %></p>
+                            <p><strong>Email:</strong> <%# Eval("contactEmail") %></p>
+                            <p><strong>Message:</strong> <%# Eval("contactMessage") %></p>
                         </div>
                         <div class="message-actions">
                             <asp:CheckBox ID="chkReviewed" runat="server" AutoPostBack="true" OnCheckedChanged="chkReviewed_CheckedChanged" />

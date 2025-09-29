@@ -39,11 +39,11 @@
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                       InsertCommand="INSERT INTO [tblContactUs] ([ContactName], [ContactEmail], [ContactMessage]) VALUES (@ContactName, @ContactEmail, @ContactMessage)">
+                       InsertCommand="INSERT INTO [tblContactUs] ([contactName], [contactEmail], [contactMessage]) VALUES (@contactName, @contactEmail, @contactMessage)">
         <InsertParameters>
-            <asp:ControlParameter Name="ContactName" ControlID="txtName" PropertyName="Text" Type="String" />
-            <asp:ControlParameter Name="ContactEmail" ControlID="txtEmail" PropertyName="Text" Type="String" />
-            <asp:ControlParameter Name="ContactMessage" ControlID="txtMessage" PropertyName="Text" Type="String" />
+            <asp:ControlParameter Name="contactName" ControlID="txtName" PropertyName="Text" Type="String" />
+            <asp:ControlParameter Name="contactEmail" ControlID="txtEmail" PropertyName="Text" Type="String" />
+            <asp:ControlParameter Name="contactMessage" ControlID="txtMessage" PropertyName="Text" Type="String" />
         </InsertParameters>
     </asp:SqlDataSource>
 

@@ -343,22 +343,21 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
             DeleteCommand="DELETE FROM [tblRegisteredUsers] WHERE [RID] = @RID" 
-            InsertCommand="INSERT INTO [tblRegisteredUsers] ([Fullname], [EmailAddress], [Username], [Password], [Age], [Gender], [Country], [Picture], [dateRegister], [Role]) VALUES (@Fullname, @EmailAddress, @Username, @Password, @Age, @Gender, @Country, @Picture, @dateRegister, @Role)" 
+            InsertCommand="INSERT INTO [tblRegisteredUsers] ([fullName], [emailAddress], [username], [password], [age], [gender], [country], [picture], [dateRegister], [role]) VALUES (@fullName, @emailAddress, @username, @password, @age, @gender, @country, @picture, @dateRegister, @role)" 
             SelectCommand="SELECT * FROM [tblRegisteredUsers]" 
-            UpdateCommand="UPDATE [tblRegisteredUsers] SET [Fullname] = @Fullname, [EmailAddress] = @EmailAddress, [Username] = @Username, [Password] = @Password, [Age] = @Age, [Gender] = @Gender, [Country] = @Country, [Picture] = @Picture, [dateRegister] = @dateRegister, [Role] = @Role WHERE [RID] = @RID">
-
+            UpdateCommand="UPDATE [tblRegisteredUsers] SET [fullName] = @fullName, [emailAddress] = @emailAddress, [username] = @username, [password] = @password, [age] = @age, [gender] = @gender, [country] = @country, [picture] = @picture, [dateRegister] = @dateRegister, [role] = @role WHERE [RID] = @RID">
 
             <InsertParameters>
-                <asp:ControlParameter Name="Fullname" ControlID="txtFullname" PropertyName="Text" />
-                <asp:ControlParameter Name="EmailAddress" ControlID="txtEmail" PropertyName="Text" />
-                <asp:ControlParameter Name="Username" ControlID="TextBox1" PropertyName="Text" />
-                <asp:ControlParameter Name="Password" ControlID="txtPassword" PropertyName="Text" />
-                <asp:ControlParameter Name="Age" ControlID="txtAge" PropertyName="Text" />
-                <asp:ControlParameter Name="Gender" ControlID="RadioButtonList1" PropertyName="SelectedValue" />
-                <asp:ControlParameter Name="Country" ControlID="dlCountry" PropertyName="SelectedValue" />
-                <asp:Parameter Name="Picture" Type="String" />
+                <asp:ControlParameter Name="fullName" ControlID="txtFullname" PropertyName="Text" />
+                <asp:ControlParameter Name="emailAddress" ControlID="txtEmail" PropertyName="Text" />
+                <asp:ControlParameter Name="username" ControlID="TextBox1" PropertyName="Text" />
+                <asp:ControlParameter Name="password" ControlID="txtPassword" PropertyName="Text" />
+                <asp:ControlParameter Name="age" ControlID="txtAge" PropertyName="Text" />
+                <asp:ControlParameter Name="gender" ControlID="RadioButtonList1" PropertyName="SelectedValue" />
+                <asp:ControlParameter Name="country" ControlID="dlCountry" PropertyName="SelectedValue" />
+                <asp:Parameter Name="picture" Type="String" />
                 <asp:Parameter Name="dateRegister" Type="DateTime" />
-                <asp:Parameter Name="Role" DefaultValue="User" Type="String" />
+                <asp:Parameter Name="role" DefaultValue="User" Type="String" />
             </InsertParameters>
 
         </asp:SqlDataSource>

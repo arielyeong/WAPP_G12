@@ -47,33 +47,37 @@
         </div>
     </div>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [tblRegisteredUsers] WHERE [RID] = @RID" InsertCommand="INSERT INTO [tblRegisteredUsers] ([Fullname], [EmailAddress], [Username], [Password], [Age], [Gender], [Country], [Picture], [dateRegister]) VALUES (@Fullname, @EmailAddress, @Username, @Password, @Age, @Gender, @Country, @Picture, @dateRegister)" SelectCommand="SELECT * FROM [tblRegisteredUsers]" UpdateCommand="UPDATE [tblRegisteredUsers] SET [Fullname] = @Fullname, [EmailAddress] = @EmailAddress, [Username] = @Username, [Password] = @Password, [Age] = @Age, [Gender] = @Gender, [Country] = @Country, [Picture] = @Picture, [dateRegister] = @dateRegister WHERE [RID] = @RID">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+            DeleteCommand="DELETE FROM [tblRegisteredUsers] WHERE [RID] = @RID" 
+            InsertCommand="INSERT INTO [tblRegisteredUsers] ([fullName], [emailAddress], [username], [password], [age], [gender], [country], [picture], [dateRegister]) VALUES (@fullName, @emailAddress, @username, @password, @age, @gender, @country, @picture, @dateRegister)" 
+            SelectCommand="SELECT * FROM [tblRegisteredUsers]" 
+            UpdateCommand="UPDATE [tblRegisteredUsers] SET [fullName] = @fullName, [emailAddress] = @emailAddress, [username] = @username, [password] = @password, [age] = @age, [gender] = @gender, [country] = @country, [picture] = @picture, [dateRegister] = @dateRegister WHERE [RID] = @RID">
             <DeleteParameters>
                 <asp:Parameter Name="RID" Type="Int32" />
             </DeleteParameters>
             <InsertParameters>
-                <asp:Parameter Name="Fullname" Type="String" />
-                <asp:Parameter Name="EmailAddress" Type="String" />
-                <asp:Parameter Name="Username" Type="String" />
-                <asp:Parameter Name="Password" Type="String" />
-                <asp:Parameter Name="Age" Type="Int32" />
-                <asp:Parameter Name="Gender" Type="String" />
-                <asp:Parameter Name="Country" Type="String" />
-                <asp:Parameter Name="Picture" Type="String" />
+                <asp:Parameter Name="fullName" Type="String" />
+                <asp:Parameter Name="emailAddress" Type="String" />
+                <asp:Parameter Name="username" Type="String" />
+                <asp:Parameter Name="password" Type="String" />
+                <asp:Parameter Name="age" Type="Int32" />
+                <asp:Parameter Name="gender" Type="String" />
+                <asp:Parameter Name="country" Type="String" />
+                <asp:Parameter Name="picture" Type="String" />
                 <asp:Parameter Name="dateRegister" Type="DateTime" />
             </InsertParameters>
             <UpdateParameters>
-                <asp:Parameter Name="Fullname" Type="String" />
-                <asp:Parameter Name="EmailAddress" Type="String" />
-                <asp:Parameter Name="Username" Type="String" />
-                <asp:Parameter Name="Password" Type="String" />
-                <asp:Parameter Name="Age" Type="Int32" />
-                <asp:Parameter Name="Gender" Type="String" />
-                <asp:Parameter Name="Country" Type="String" />
-                <asp:Parameter Name="Picture" Type="String" />
+                <asp:Parameter Name="fullName" Type="String" />
+                <asp:Parameter Name="emailAddress" Type="String" />
+                <asp:Parameter Name="username" Type="String" />
+                <asp:Parameter Name="password" Type="String" />
+                <asp:Parameter Name="age" Type="Int32" />
+                <asp:Parameter Name="gender" Type="String" />
+                <asp:Parameter Name="country" Type="String" />
+                <asp:Parameter Name="picture" Type="String" />
                 <asp:Parameter Name="dateRegister" Type="DateTime" />
                 <asp:Parameter Name="RID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-    </p>
+
 </asp:Content>

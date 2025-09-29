@@ -33,27 +33,27 @@ namespace WAPP_G12
             string cs = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(cs))
             {
-                string query = "SELECT Fullname, EmailAddress, Username, Age, Gender, Country, Picture FROM tblRegisteredUsers WHERE Username=@Username";
+                string query = "SELECT fullName, emailAddress, username, age, gender, country, picture FROM tblRegisteredUsers WHERE username = @username";
                 SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@username", username);
 
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    txtFullname.Text = dr["Fullname"].ToString();
-                    txtEmail.Text = dr["EmailAddress"].ToString();
-                    txtUsername.Text = dr["Username"].ToString();
-                    txtAge.Text = dr["Age"].ToString();
+                    txtFullname.Text = dr["fullName"].ToString();
+                    txtEmail.Text = dr["emailAddress"].ToString();
+                    txtUsername.Text = dr["username"].ToString();
+                    txtAge.Text = dr["age"].ToString();
 
-                    string gender = dr["Gender"].ToString().Trim();
+                    string gender = dr["gender"].ToString().Trim();
                     if (rbGender.Items.FindByValue(gender) != null)
                         rbGender.SelectedValue = gender;
 
-                    dlCountry.SelectedValue = dr["Country"].ToString();
+                    dlCountry.SelectedValue = dr["country"].ToString();
 
-                    if (dr["Picture"] != DBNull.Value)
-                        imgPreview.ImageUrl = "~/Uploads/" + dr["Picture"].ToString();
+                    if (dr["picture"] != DBNull.Value)
+                        imgPreview.ImageUrl = "~/Uploads/" + dr["picture"].ToString();
                 }
                 con.Close();
             }
@@ -75,19 +75,19 @@ namespace WAPP_G12
             using (SqlConnection con = new SqlConnection(cs))
             {
                 string query = @"UPDATE tblRegisteredUsers 
-                                 SET Fullname=@Fullname, EmailAddress=@Email, Age=@Age, 
-                                     Gender=@Gender, Country=@Country" + (pictureFileName != null ? ", Picture=@Picture" : "") +
-                                 " WHERE Username=@Username";
+                         SET fullName = @fullName, emailAddress = @email, age = @age, 
+                             gender = @gender, country = @country" + (pictureFileName != null ? ", picture = @picture" : "") +
+                                 " WHERE username = @username";
 
                 SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Fullname", txtFullname.Text);
-                cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-                cmd.Parameters.AddWithValue("@Age", txtAge.Text);
-                cmd.Parameters.AddWithValue("@Gender", rbGender.SelectedValue);
-                cmd.Parameters.AddWithValue("@Country", dlCountry.SelectedValue);
+                cmd.Parameters.AddWithValue("@fullName", txtFullname.Text);
+                cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@age", txtAge.Text);
+                cmd.Parameters.AddWithValue("@gender", rbGender.SelectedValue);
+                cmd.Parameters.AddWithValue("@country", dlCountry.SelectedValue);
                 if (pictureFileName != null)
-                    cmd.Parameters.AddWithValue("@Picture", pictureFileName);
-                cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("@picture", pictureFileName);
+                cmd.Parameters.AddWithValue("@username", txtUsername.Text);
 
                 con.Open();
                 cmd.ExecuteNonQuery();

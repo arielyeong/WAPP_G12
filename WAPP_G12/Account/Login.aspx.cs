@@ -27,11 +27,11 @@ namespace WAPP_G12
             {
                 conn.Open();
 
-                // Select Username + Role
-                string query = @"SELECT Username, Role 
-                                 FROM tblRegisteredUsers 
-                                 WHERE (Username = @username OR EmailAddress = @username) 
-                                 AND Password = @password";
+                // Select username + role
+                string query = @"SELECT username, role 
+                         FROM tblRegisteredUsers 
+                         WHERE (username = @username OR emailAddress = @username) 
+                         AND password = @password";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", username);
@@ -41,8 +41,8 @@ namespace WAPP_G12
 
                 if (reader.Read())
                 {
-                    string loggedInUser = reader["Username"].ToString();
-                    string role = reader["Role"].ToString();
+                    string loggedInUser = reader["username"].ToString();
+                    string role = reader["role"].ToString();
 
                     Session["Username"] = loggedInUser;
                     Session["Role"] = role;

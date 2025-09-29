@@ -32,25 +32,25 @@ namespace WAPP_G12
             string connStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string query = "SELECT * FROM tblRegisteredUsers WHERE Username=@Username";
+                string query = "SELECT * FROM tblRegisteredUsers WHERE username = @username";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@username", username);
 
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    lblFullname.Text = reader["Fullname"].ToString();
-                    lblEmail.Text = reader["EmailAddress"].ToString();
-                    lblUsername.Text = reader["Username"].ToString();
-                    lblAge.Text = reader["Age"].ToString();
-                    lblGender.Text = reader["Gender"].ToString();
-                    lblCountry.Text = reader["Country"].ToString();
+                    lblFullname.Text = reader["fullName"].ToString();
+                    lblEmail.Text = reader["emailAddress"].ToString();
+                    lblUsername.Text = reader["username"].ToString();
+                    lblAge.Text = reader["age"].ToString();
+                    lblGender.Text = reader["gender"].ToString();
+                    lblCountry.Text = reader["country"].ToString();
                     lblDate.Text = Convert.ToDateTime(reader["dateRegister"]).ToString("dd MMM yyyy");
 
-                    if (!string.IsNullOrEmpty(reader["Picture"].ToString()))
-                        imgProfile.ImageUrl = reader["Picture"].ToString();
+                    if (!string.IsNullOrEmpty(reader["picture"].ToString()))
+                        imgProfile.ImageUrl = reader["picture"].ToString();
                     else
                         imgProfile.ImageUrl = "~/Images/default-avatar.png"; // fallback
                 }
