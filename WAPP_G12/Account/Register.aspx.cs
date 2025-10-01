@@ -13,5 +13,27 @@ namespace WAPP_G12
         {
 
         }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != txtConPass.Text)
+            {
+                lblMessage.Text = "Passwords do not match!";
+                return;
+            }
+
+            SqlDataSource1.InsertParameters["dateRegister"].DefaultValue = DateTime.Now.ToString();
+
+            try
+            {
+                SqlDataSource1.Insert();
+                lblMessage.Text = "✅ Registration Successful!";
+                Response.Redirect("~/Account/Login.aspx"); // optional auto redirect
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "❌ Error: " + ex.Message;
+            }
+        }
     }
 }

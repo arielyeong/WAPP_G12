@@ -125,7 +125,9 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Admin\EditUserInfo.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Account\ForgotPassword.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
@@ -192,7 +194,11 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Styles\site.css" />
     <Content Include="Site.Master" />
+    <Content Include="Account\UpdateProfile.aspx" />
+    <Content Include="User\UserHomePage.aspx" />
+    <Content Include="Admin\ViewMessage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Admin\ViewUserList.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -220,6 +226,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditUserInfo.aspx.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUserInfo.aspx.designer.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -288,12 +308,40 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Account\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserHomePage.aspx.cs">
+      <DependentUpon>UserHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserHomePage.aspx.designer.cs">
+      <DependentUpon>UserHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewMessage.aspx.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewMessage.aspx.designer.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewUserList.aspx.cs">
+      <DependentUpon>ViewUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewUserList.aspx.designer.cs">
+      <DependentUpon>ViewUserList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

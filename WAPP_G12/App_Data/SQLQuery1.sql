@@ -1,3 +1,4 @@
+
  ﻿﻿INSERT INTO [dbo].[tblstudents]
     (SID, student_name, student_email, student_phonenum, studnet_gender, student_age, student_country, student_username, student_password)
 VALUES
