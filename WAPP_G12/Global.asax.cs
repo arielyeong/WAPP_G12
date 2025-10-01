@@ -18,5 +18,4 @@ namespace WAPP_G12
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
-    
 }
