@@ -1,4 +1,4 @@
-﻿﻿INSERT INTO [dbo].[tblstudents]
+ ﻿﻿INSERT INTO [dbo].[tblstudents]
     (SID, student_name, student_email, student_phonenum, studnet_gender, student_age, student_country, student_username, student_password)
 VALUES
     (1, 'Ariel Yeong', 'ariel.yeong@example.com', '0123456789', 'Female', 20, 'Malaysia', 'arielyy', 'hashed_password_123'),
