@@ -126,14 +126,14 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
-    <Content Include="Flashcard\Quiz.aspx" />
-    <Content Include="Flashcard\viewFlashcard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\Profile.aspx" />
     <Content Include="Account\Logout.aspx" />
     <Content Include="Images\WebLogo.png" />
+    <Content Include="Flashcard\Quiz.aspx" />
+    <Content Include="Flashcard\viewFlashcard.aspx" />
     <Content Include="Pages\Home.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -221,20 +221,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Flashcard\Quiz.aspx.cs">
-      <DependentUpon>Quiz.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Flashcard\Quiz.aspx.designer.cs">
-      <DependentUpon>Quiz.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Flashcard\viewFlashcard.aspx.cs">
-      <DependentUpon>viewFlashcard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Flashcard\viewFlashcard.aspx.designer.cs">
-      <DependentUpon>viewFlashcard.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -258,6 +244,20 @@
     </Compile>
     <Compile Include="Account\Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flashcard\Quiz.aspx.cs">
+      <DependentUpon>Quiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flashcard\Quiz.aspx.designer.cs">
+      <DependentUpon>Quiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flashcard\viewFlashcard.aspx.cs">
+      <DependentUpon>viewFlashcard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flashcard\viewFlashcard.aspx.designer.cs">
+      <DependentUpon>viewFlashcard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
