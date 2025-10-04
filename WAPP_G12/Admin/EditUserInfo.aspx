@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditUserInfo.aspx.cs" Inherits="WAPP_G12.EditUserInfo" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="EditUserInfo.aspx.cs" Inherits="WAPP_G12.EditUserInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
              <div class="d-flex justify-content-center align-items-center" style="min-height:80vh;">
         <div class="card p-4 shadow-lg" style="max-width:800px; width:100%; border-radius:10px;">

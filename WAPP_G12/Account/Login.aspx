@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WAPP_G12.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="d-flex justify-content-center align-items-center login-container">
         <div class="card p-5 shadow-lg" style="width: 380px; border-radius: 12px;">
             
-            <h1 class="text-center mb-3">Welcome Back!</h1>
+            <h1 class="text-center mb-3">Welcome!</h1>
             <p class="text-center mb-4"><strong>Login below or create an account</strong></p>
 
             <!-- Username -->

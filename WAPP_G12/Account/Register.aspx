@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WAPP_G12.Register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-        <div class="d-flex justify-content-center align-items-center" style="min-height:80vh;">
+        <div class="d-flex justify-content-center align-items-center login-container">
         <div class="card p-4 shadow-lg" style="max-width:700px; width:100%; border-radius:10px;">
             <h1 class="text-center mb-3">Sign Up</h1>
 
@@ -311,6 +311,7 @@
                         <div class="mb-3">
                             <label for="FileUploadPic" class="form-label">Profile Picture</label>
                             <asp:FileUpload ID="FileUploadPic" runat="server" CssClass="form-control" />
+                            <asp:Label ID="lblPicture" runat="server" Text="Label"></asp:Label>
                         </div>
                     </div>
                 </div>
@@ -357,8 +358,9 @@
                 <asp:ControlParameter Name="country" ControlID="dlCountry" PropertyName="SelectedValue" />
                 <asp:Parameter Name="picture" Type="String" />
                 <asp:Parameter Name="dateRegister" Type="DateTime" />
-                <asp:Parameter Name="role" DefaultValue="User" Type="String" />
+                <asp:Parameter Name="role" Type="String" DefaultValue="User" />
             </InsertParameters>
+
 
         </asp:SqlDataSource>
 

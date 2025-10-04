@@ -1,26 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewUserList.aspx.cs" Inherits="WAPP_G12.ViewUserList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="ViewUserList.aspx.cs" Inherits="WAPP_G12.ViewUserList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-        <!-- Sidebar -->
-        <aside class="admin-sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <div class="sidebar-logo">SCIVERSE<br>General Science Learning</div>
-            </div>
-            <nav class="sidebar-nav">
-                <a href="~/Account/Profile.aspx" runat="server" class="sidebar-item"><i class="fa fa-user"></i> Profile</a>
-                <a href="~/Admin/ViewUserList.aspx" runat="server" class="sidebar-item active"><i class="fa fa-users"></i> User List</a>
-                <a href="~/Account/QuizList.aspx" runat="server" class="sidebar-item"><i class="fa fa-question-circle"></i> Quiz List</a>
-                <a href="~/Account/LearningMaterial.aspx" runat="server" class="sidebar-item"><i class="fa fa-book"></i> Learning Material</a>
-                <a href="~/Account/LearningMaterial.aspx" runat="server" class="sidebar-item"><i class="fa fa-chart-bar"></i> User Performance</a>
-                <a href="~/Admin/ViewMessage.aspx" runat="server" class="sidebar-item"><i class="fa fa-envelope"></i> View Messages</a>
-            </nav>
-        </aside>
 
     <!-- Main Content -->
     <div class="admin-content" id="contentArea">
         <!-- Header with Title and Toggle Button -->
         <div class="content-header">
-            <button class="menu-toggle" type="button" onclick="toggleSidebar()">☰ Menu</button>
             <h1>View User List</h1>
         </div>
 
@@ -51,7 +36,9 @@
                 <asp:BoundField DataField="country" HeaderText="Country" />
                 <asp:BoundField DataField="picture" HeaderText="Picture File Path" />
                 <asp:BoundField DataField="dateRegister" HeaderText="Date Register" />
-                <asp:ImageField DataImageUrlField="picture" HeaderText="Picture"></asp:ImageField>
+                <asp:ImageField DataImageUrlField="picture" HeaderText="Picture">
+                    <ControlStyle Width="80px" Height="80px" />
+                </asp:ImageField>
 
                 <asp:TemplateField HeaderText="Actions">
                     <ItemTemplate>

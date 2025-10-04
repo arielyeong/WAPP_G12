@@ -5,7 +5,7 @@
     <main>
             <!-- home -->
     <section id="home">
-        <h2 class="text-center">Welcome to SciVerse – Science Made Interactive!</h2>
+        <h2 class="text-center">Welcome to SciVerse, Guest – Science Made Interactive!</h2>
         <p class="text-center">
             SciVerse is a web-based e-learning application developed to educate secondary school students in general science. 
             It combines multimedia resources, interactive quizzes, and virtual experiments to inspire students and build 

@@ -26,10 +26,13 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
+
         }
     </style>
 
     <h1 class="text-center mb-3">Your Profile</h1>
+
+<div class="d-flex justify-content-center align-items-center login-container">
 
     <div class="profile-container">
         <asp:Image ID="imgProfile" runat="server" CssClass="profile-picture" />
@@ -74,7 +77,8 @@
             </div>
 
     </div>
-
+    </div>
+    
 
 
 

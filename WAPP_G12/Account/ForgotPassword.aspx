@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="WAPP_G12.ForgotPassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-        <div class="card p-5 shadow-lg" style="width: 380px; border-radius: 12px;">
+    <div class="d-flex justify-content-center align-items-center login-container">
+        <div class="card p-4 shadow-lg" style="max-width:700px; width:100%; border-radius:10px;">
 
             <!-- Title -->
             <h1 class="text-center mb-3">Forgot Your Password?</h1>
